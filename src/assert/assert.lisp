@@ -10,7 +10,7 @@
   return: reuslt or nil"
   (let ((result (gensym)))
     `(let ((,result ,fn))
-       (assert-report (= ,expected (,@result))
+       (assert-report (= ,expected ,result)
                       ,expected
                       ,result
                       ',fn))))
