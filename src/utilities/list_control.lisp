@@ -17,3 +17,5 @@
         ,@(mapcar (lambda (v)
             `(setf ,v (funcall ,fn ,v)))
             vars)))
+(defun mapcar-non-nil (fn lst)
+  (remove-if #'null (mapcar fn lst)))
