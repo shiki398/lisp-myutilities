@@ -19,3 +19,5 @@
             vars)))
 (defun mapcar-non-nil (fn lst)
   (remove-if #'null (mapcar fn lst)))
+(defun mapcan-non-nil (fn lst)
+  (remove-if #'null (mapcan fn lst)))
